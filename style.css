@@ -32,7 +32,7 @@ h2 {
   font-size: 48px;
   margin: 16px 0 0;
   color: #243e63;
-  font-weight: 800;
+  font-weight: 900;
 }
 h6 {
   font-size: 20px;
@@ -43,7 +43,7 @@ h6 {
 .h5__span {
   font-size: 16px;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin: 0 0 16px 0;
 }
 p {
@@ -125,6 +125,7 @@ h3 {
   background-color: #6415ff;
   border-radius: 999px;
   transition: all 300ms ease;
+  cursor: pointer;
 }
 .nav__link--anchor--sign-up {
   color: #fff;
@@ -649,9 +650,10 @@ h3 {
     display: flex;
     flex-direction: column;
     padding: 0 0 0 64px;
+    position: relative;
   }
-  .testimonials__header::-webkit-scrollbar{
-    display: non;
+  .header__feedback--wrapper::-webkit-scrollbar{
+    display: none;
   }
     
 .testimonials__header--para{
@@ -664,9 +666,13 @@ h3 {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+
 }
-.header__feedback{
-  margin-right: 400px;
+.header__feedback--wrap{
+  flex: 0 0 auto;
+  height: 100%;
+  width: 100%;
+
 }
 .feedback__star--wrapper{
     width: 120px;
@@ -676,11 +682,13 @@ h3 {
   font-size: 20px;
   color:#243e63;
   margin: 16px 0 0;
+  letter-spacing: 0;
 }
 .feedback__para{
   font-size: 16px;
   color:#4a5568;
   margin: 16px 0 40px;
+  font-weight: 500;
 }
 .feedback__navigation{
   display: flex;
@@ -710,6 +718,9 @@ h3 {
 .feedback__navigation--arrows{
 display: flex;
 align-items: center;
+position: absolute;
+bottom: 0;
+right: 0
 }
 .feedback__navigation--btn{
   border-style: none;
@@ -728,9 +739,19 @@ align-items: center;
   transform: translateX(-12px);
 }
 
-.gay__wrapper{
+/* FAQS */
+
+.faqs__container{
+  padding: 96px 0;
+}
+
+.faqs__header{
   display: flex;
-  width: 100%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.faqs__header--para{
+  max-width: 550px;
+  margin: 18px 0 0;
 }
