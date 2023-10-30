@@ -93,7 +93,7 @@ h3 {
 .nav__logo--text {
   font-size: 24px;
   color: #243e63;
-  font-weight: bold;
+  font-weight: 900;
   transition: all 200ms ease;
 }
 .nav__links {
@@ -103,7 +103,7 @@ h3 {
 .nav__link {
   margin: 0 24px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
 }
 .nav__link--anchor {
