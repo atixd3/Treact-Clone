@@ -834,7 +834,7 @@ right: 0
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 20px 0 0;
+margin: 30px 0 0;
 
 }
 .faqs__question{
@@ -1091,6 +1091,9 @@ h5{
   width: 100%;
   max-width: 500px;
 }
+.faqs__question--wrap{
+  margin: 40px 0;
+}
 .get-started__container{
   background-image: url(assets/decorated-background2.png);
 }
@@ -1206,6 +1209,9 @@ align-items: center;
   }
   .header__feedback{
     align-items: center;
+  }
+  .faqs__question--wrap{
+    margin: 50px 0;
   }
   .feedback__profile--description{
     max-width: 300px;
@@ -1363,6 +1369,11 @@ width: 100%;
   align-items: center;
   text-align: center;
 }
+}
+@media (max-width: 500px){
+  .pricing__plan{
+    max-width: 80%;
+  }
 }
 @media (max-width: 400px){
   .quality__img--decoration{
