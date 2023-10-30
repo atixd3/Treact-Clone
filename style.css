@@ -1370,11 +1370,6 @@ width: 100%;
   text-align: center;
 }
 }
-@media (max-width: 500px){
-  .pricing__plan{
-    max-width: 80%;
-  }
-}
 @media (max-width: 400px){
   .quality__img--decoration{
     transform: scale(50%);
