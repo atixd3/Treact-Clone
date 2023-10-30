@@ -1405,6 +1405,6 @@ width: 100%;
 #faqs,
 #get-started,
 #footer{
-  transition: all 500ms ease 300ms;
+  transition: all 500ms ease 100ms;
 
 }
