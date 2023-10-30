@@ -148,6 +148,10 @@ h3 {
   z-index:99999;
   display: none;
   background: none;
+  transition: all 300ms ease;
+}
+.btn__menu--open:hover{
+  color:#6415ff
 }
 .menu--open .menu__backdrop{
 visibility: visible;
@@ -166,6 +170,11 @@ left: 1px;
   filter: opacity(50%);
   cursor: pointer;
   background: none;
+  transition: all 300ms ease;
+}
+.btn__menu--close:hover{
+  color:#6415ff;
+  filter:opacity(80%)
 }
 .menu__backdrop{
   position: absolute;
@@ -214,7 +223,7 @@ left: 1px;
 /* HEADER */
 
 .header__container {
-  padding: 96px 0;
+  padding: 92px 0;
   display: flex;
   width: 100%;
 }
@@ -300,7 +309,7 @@ left: 1px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 96px 0;
+  padding: 92px 0;
 }
 .features--para {
   max-width: 520px;
@@ -1380,9 +1389,22 @@ width: 100%;
 .hidden{
   transform: translateX(-100%);
 }
+.hidden2{
+  transform: translateX(100%);
+}
 .show{
   transform: translateX(0);
 }
-#landing{
-  transition: all 500ms ease;
+#landing,
+#features,
+#quality,
+#steps,
+#values,
+#pricing,
+#testimonials,
+#faqs,
+#get-started,
+#footer{
+  transition: all 500ms ease 300ms;
+
 }
