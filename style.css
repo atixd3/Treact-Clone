@@ -1251,6 +1251,9 @@ align-items: center;
 
 
 @media (max-width: 639px){
+  .header__container{
+    padding: 48px 0;
+  }
   .header__get-started--sign-up{
     flex-direction: column;
   }
