@@ -838,17 +838,15 @@ right: 0
 }
 .faqs__questions{
   margin: 48px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.faqs__question--wrap{
+.faqs__question__wrap{
 display: flex;
 flex-direction: column;
 align-items: center;
 margin: 30px 0 0;
-
-}
-.faqs__question{
-display: flex;
-justify-content: space-between;
 background-color: #edf2f7;
 border-radius: 6px;
 padding: 16px 40px;
@@ -856,7 +854,15 @@ width: 100%;
 max-width: 896px;
 transition: all 300ms ease;
 cursor: pointer;
-position: relative;
+height: 7vh;
+
+}
+.faqs__question{
+display: flex;
+justify-content: space-between;
+width: 100%;
+align-items: center;
+margin-top: 4px;
 }
 .faqs__question--h3{
   font-size: 20px;
@@ -864,15 +870,19 @@ position: relative;
   font-weight: 600;
   letter-spacing: 0;
 }
-.faqs__question--arrow{
+.question__arrow--wrap{
+  width: 24px;
+  height: 24px;
   transition: 300ms ease;
+  margin-left: 32px;
 }
 .faqs__answer{
-  position: absolute;
+  margin-top: 16px;
   bottom: 15px;
   left: 50px;
   filter: opacity(0);
-  transition: all 100ms ease;
+  display: none;
+  width: 100%;
 }
 .faqs__answer--para{
   max-width: 700px ;
@@ -880,14 +890,16 @@ position: relative;
   font-size: 1rem;
   color: #243e63;
 }
-.faqs__question.active{
-  padding-bottom: 120px;
+.faqs__question__wrap.active{
+  height: 20vh;
+
 }
-.faqs__question.active .faqs__question--arrow{
+.active .question__arrow--wrap{
   transform: rotate(-180deg)
 }
-.faqs__question.active .faqs__answer{
+.active .faqs__answer{
   filter: opacity(100);
+  display: block;
 }
 /* GET-STARTED */
 
@@ -1100,8 +1112,9 @@ h5{
   width: 100%;
   max-width: 500px;
 }
-.faqs__question--wrap{
-  margin: 40px 0;
+.faqs__question--h3{
+  font-size: 18px;
+  line-height: 1.5;
 }
 .get-started__container{
   background-image: url(assets/decorated-background2.png);
@@ -1210,6 +1223,12 @@ align-items: center;
     text-align: center;
     padding: 0;
   }
+  .faqs__question__wrap{
+    height: 9vh;
+  }
+  .faqs__question__wrap.active{
+height: 24vh;
+  }
   .feedback__star--wrapper{
     margin: 0 auto;
   }
@@ -1218,9 +1237,6 @@ align-items: center;
   }
   .header__feedback{
     align-items: center;
-  }
-  .faqs__question--wrap{
-    margin: 50px 0;
   }
   .feedback__profile--description{
     max-width: 300px;
@@ -1242,11 +1258,9 @@ align-items: center;
     text-align: center;
   }
   .footer__logo--wrapper{
-    max-width: 150px;pricing
+    max-width: 150px; 
   }
 }
-
-
 
 
 
@@ -1326,14 +1340,11 @@ width: 100%;
   .feedback__profile--description{
     max-width: 300px;
   }
-  .faqs__question.active{
-    padding: 16px 40px 200px;
+  .faqs__question__wrap{
+    height: 10vh;
   }
-  .faqs__answer{
-    bottom: 100px
-  }
-  .faqs__answer--para{
-    font-size: 14px;
+  .faqs__question__wrap.active{
+height: 24vh;
   }
   .footer__columns{
     flex-wrap: wrap;
@@ -1382,11 +1393,76 @@ width: 100%;
   text-align: center;
 }
 }
+
+@media (max-width:600px) {
+.faqs__question{
+  margin-top: 16px
+}
+  .faqs__question__wrap{
+height: 12vh;
+  }
+  .faqs__question__wrap.active{
+    height: 30vh;
+  }
+
+.question__arrow--wrap{
+  margin-left: 64px;
+}
+}
+@media (max-width:485px) {
+  .faqs__question{
+    margin-top: 16px
+  }
+    .faqs__question__wrap{
+  height: 14vh;
+    }
+    .faqs__question__wrap.active{
+      height: 35vh;
+    }
+  .question__arrow--wrap{
+    margin-left: 16px;
+  }
+}
+@media (max-width:422px) {
+  .faqs__question{
+    margin-top: 16px
+  }
+    .faqs__question__wrap{
+  height: 17vh;
+    }
+    .faqs__question__wrap.active{
+      height: 40vh;
+    }
+  .question__arrow--wrap{
+    margin-left: 8px;
+  }
+}
 @media (max-width: 400px){
   .quality__img--decoration{
     transform: scale(50%);
 }
 }
+@media (max-width:350px) {
+  .faqs__question{
+    margin-top: 16px
+  }
+    .faqs__question__wrap{
+  height: 18vh;
+    }
+    .faqs__question__wrap.active{
+      height: 45vh;
+    }
+  .question__arrow--wrap{
+    margin-left: 8px;
+  }
+  .faqs__question--h3{
+    font-size: 16px;
+  }
+  .faqs__answer--para{
+    font-size: 12px;
+  }
+}
+
 
 /* ANIMATIONS */
 .hidden{
